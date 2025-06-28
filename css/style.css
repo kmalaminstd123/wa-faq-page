@@ -28,11 +28,7 @@ li {
     --shadow-dark: rgba(117, 100, 44, 0.3);
 }
 
-* {
-    box-sizing: border-box;
-}
-
-body {
+.faq-page-container {
     background-color: var(--light-beige);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -41,32 +37,9 @@ body {
     overflow-x: hidden;
 }
 
-/* Decorative background pattern */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image:
-        radial-gradient(circle at 20% 20%, var(--medium-brown) 2px, transparent 2px),
-        radial-gradient(circle at 80% 80%, var(--primary-brown) 1px, transparent 1px),
-        radial-gradient(circle at 40% 60%, var(--medium-brown) 1px, transparent 1px);
-    background-size: 100px 100px, 150px 150px, 80px 80px;
-    opacity: 0.1;
-    z-index: -1;
-}
-
-.main-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
 .faq-wrapper {
     background-color: var(--white);
-    border-radius: 30px;
+    /* border-radius: 30px; */
     box-shadow:
         0 20px 60px var(--shadow-medium),
         inset 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -75,7 +48,7 @@ body::before {
 }
 
 /* Decorative corner elements */
-.faq-wrapper::before,
+
 .faq-wrapper::after {
     content: '';
     position: absolute;
@@ -83,12 +56,6 @@ body::before {
     height: 100px;
     background-color: var(--primary-brown);
     z-index: 1;
-}
-
-.faq-wrapper::before {
-    top: 0;
-    left: 0;
-    clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
 .faq-wrapper::after {
@@ -102,23 +69,7 @@ body::before {
     color: var(--white);
     padding: 3rem 2rem;
     text-align: center;
-    position: relative;
     z-index: 2;
-}
-
-.header-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:
-        polygon(50% 0%, 0% 100%, 100% 100%),
-        polygon(50% 0%, 0% 100%, 100% 100%);
-    background-size: 60px 30px;
-    opacity: 0.1;
-    z-index: -1;
 }
 
 .header-title {
@@ -151,7 +102,7 @@ body::before {
     width: 100%;
     padding: 1.2rem 1.5rem 1.2rem 3.5rem;
     border: 3px solid var(--primary-brown);
-    border-radius: 25px;
+    border-radius: 10px;
     font-size: 1.1rem;
     background-color: var(--white);
     color: var(--text-dark);
@@ -204,7 +155,7 @@ body::before {
     color: var(--primary-brown);
     font-weight: 600;
     padding: 1rem 0.8rem;
-    border-radius: 20px;
+    border-radius: 5px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
     text-align: center;
@@ -261,7 +212,7 @@ body::before {
 .faq-card {
     background-color: var(--white);
     border: 2px solid var(--light-beige);
-    border-radius: 20px;
+    border-radius: 5px;
     margin-bottom: 1.5rem;
     overflow: hidden;
     transition: all 0.3s ease;
