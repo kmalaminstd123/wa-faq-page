@@ -82,6 +82,8 @@ document.addEventListener('DOMContentLoaded', function () {
         let hasResults = false;
         
         allFaqCards.forEach(card => {
+
+            // faq answer & question
             const question = card.querySelector('.faq-question-btn').textContent.toLowerCase();
             const answer = card.querySelector('.faq-answer-text').textContent.toLowerCase();
             
@@ -100,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (pane.querySelector('.faq-card[style*="display: block"]')) {
                 pane.style.display = 'block';
             }
+        
         });
     });
 
