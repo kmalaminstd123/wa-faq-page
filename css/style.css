@@ -39,7 +39,6 @@ li {
 
 .faq-wrapper {
     background-color: var(--white);
-    /* border-radius: 30px; */
     box-shadow:
         0 20px 60px var(--shadow-medium),
         inset 0 1px 0 rgba(255, 255, 255, 0.8);
